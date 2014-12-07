@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -13,9 +14,11 @@ namespace RepositorioAccesoDatos
         where TEntidad : class
     {
 
-        protected rrhhEntities Context;
+        //protected WebApiTelefonos.Models.VentaTelefonoEntities Context;
+        protected DbContext Context;
 
-        public Repositorio(rrhhEntities context)
+        //public Repositorio(WebApiTelefonos.Models.VentaTelefonoEntities context)
+        public Repositorio(DbContext context)
         {
             Context = context;
         }
